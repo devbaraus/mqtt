@@ -1,0 +1,15 @@
+{
+  "name": "mqtt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index --ignore db.json"
+  },
+  "dependencies": {
+    "mqtt": "^4.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

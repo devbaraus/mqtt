@@ -7,6 +7,7 @@
     "dev": "nodemon index --ignore db.json"
   },
   "dependencies": {
+    "dotenv": "^14.3.2",
     "mqtt": "^4.3.4"
   },
   "devDependencies": {

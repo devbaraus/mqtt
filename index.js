@@ -1,10 +1,11 @@
+require('dotenv').config()
+
 const mqtt = require('mqtt')
 const { Database } = require('./database')
-
 const db = new Database()
 
-const host = 'candyminnow338.cloud.shiftr.io'
-const port = '1883'
+const host = process.env.HOST
+const port = process.env.PORT
 const clientId = `mqtt_${Math.random().toString(16).slice(3)}`
 
 
@@ -14,8 +15,8 @@ const client = mqtt.connect(connectUrl, {
     clientId,
     clean: true,
     connectTimeout: 4000,
-    username: 'candyminnow338',
-    password: 'qAO8sKqCtHkDkbGL',
+    username: process.env.USER,
+    password: process.env.PASSWORD,
     reconnectPeriod: 1000,
 })
 
